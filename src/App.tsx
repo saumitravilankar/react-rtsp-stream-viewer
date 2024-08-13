@@ -10,10 +10,11 @@ function App() {
     <>
       <BrowserRouter>
         <AppBar />
-        <RTSPPlayer />
+        {/* <RTSPPlayer /> */}
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/" element={<Landing />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/video-player" element={<RTSPPlayer />} />
         </Routes>
       </BrowserRouter>
     </>
@@ -26,6 +27,9 @@ function AppBar() {
     <div>
       <button onClick={() => navigate("/")}>Go to landing</button>
       <button onClick={() => navigate("/dashboard")}>Go to dashboard</button>
+      <button onClick={() => navigate("/video-player")}>
+        Go to video player
+      </button>
     </div>
   );
 }

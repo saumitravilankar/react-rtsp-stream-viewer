@@ -11,7 +11,7 @@ const RtspStream = () => {
         const { loadPlayer } = await import("rtsp-relay/browser");
 
         player = loadPlayer({
-          url: `ws://localhost:2000/api/stream`,
+          url: `ws://localhost:8000/api/stream?rtspUrl=rtsp://user:Admin$123@103.162.197.92:600/media/video2`,
           canvas: canvasRef.current,
         });
 
